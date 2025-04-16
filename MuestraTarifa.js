@@ -75,7 +75,10 @@ function MostrarTarifarioCarros(nombreU, apellidoU) {
      categoria.servicios.forEach(servicio => {
   
       console.log(`- Tipo de Vehículo: ${servicio.tipo}, Tarifa de: S/. ${servicio.tarifa}`);
-  
+
+  //Exportar la función para que pueda ser utilizada en otro archivo
+    module.exports.MostrarTarifarioCarros = MostrarTarifarioCarros;
+
      });
   
     });
@@ -85,9 +88,8 @@ function MostrarTarifarioCarros(nombreU, apellidoU) {
     return tarifario;
   
    }
-  
+   
     
-  
    MostrarTarifarioCarros("Estrella", "Dominguez");
   
-    
+   
