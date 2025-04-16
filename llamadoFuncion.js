@@ -1,10 +1,11 @@
-// Importamos el archivo que contiene las funiones
-const modulo = require('./MuestraTarifa');
+const mostrarServicios = require("./MuestraTarifa");
+const calcularCosto = require("./CalcularTarifa");
 
-const nombreU = "Estrella";
-const apellidoU = "Dominguez";
+mostrarServicios.MostrarTarifarioCarros("Favio", "Coronado");
 
-
-modulo.MostrarTarifarioCarros(nombreU,apellidoU)
-
-
+calcularCosto.calculartarifaM(
+  "Favio Coronado", 
+  "TOYOTA YARIS - placa XH767", 
+  "menores_sin_motor", 
+  4
+);
