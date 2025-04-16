@@ -1,3 +1,5 @@
+// tarifario para diferentes tipos de vehículos
+
 function MostrarTarifarioCarros(nombreU, apellidoU) {
 
     const tarifario = [
@@ -62,11 +64,15 @@ function MostrarTarifarioCarros(nombreU, apellidoU) {
   
     ];
   
-    
+   
   
     // Mostrar mensaje
   
     console.log(`Tarifario de servicios para el usuario: ${nombreU} ${apellidoU}`);
+  
+  
+  
+    // Recorrer
   
     tarifario.forEach(categoria => {
   
@@ -75,21 +81,19 @@ function MostrarTarifarioCarros(nombreU, apellidoU) {
      categoria.servicios.forEach(servicio => {
   
       console.log(`- Tipo de Vehículo: ${servicio.tipo}, Tarifa de: S/. ${servicio.tarifa}`);
-
-  //Exportar la función para que pueda ser utilizada en otro archivo
-    module.exports.MostrarTarifarioCarros = MostrarTarifarioCarros;
-
+  
      });
   
     });
   
-    
+  
+  
+    // Devolver la lista completa por si se quiere usar después
   
     return tarifario;
   
    }
-   
-    
-   MostrarTarifarioCarros("Estrella", "Dominguez");
   
-   
+   //datos de ejemplo 
+  
+   MostrarTarifarioCarros("Estrella", "Dominguez");
